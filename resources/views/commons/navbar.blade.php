@@ -26,6 +26,7 @@
                     @else
                         <li>{!! link_to_route('signup.get', 'ユーザー登録') !!}</li>
                         <li>{!! link_to_route('login.get', 'ログイン') !!}</li>
+                        <li>{!! link_to_route('users.index', 'ユーザー一覧') !!}</li>
                     @endif
                 </ul>
             </div>

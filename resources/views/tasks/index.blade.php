@@ -13,6 +13,7 @@
         </div>
     </div>
      @endif
+      @include('users.users', ['users' => $users])
 
     <h1>タスク一覧</h1>
 
