@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <h1>id = {{ $task->id }} のタスク詳細ページ</h1>
     <table class="table table-bordered">
         <tr>
@@ -10,7 +11,7 @@
         </tr>
         <tr>
             <th>進捗</th>
-            <td>{{ $task->title }}</td>
+            <td>{{ $task->status }}</td>
         </tr>
         <tr>
             <th>タスク</th>

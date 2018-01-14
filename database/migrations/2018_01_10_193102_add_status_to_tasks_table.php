@@ -1,8 +1,6 @@
 <?php
-
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
 class AddStatusToTasksTable extends Migration
 {
     /**
@@ -14,13 +12,9 @@ class AddStatusToTasksTable extends Migration
     {
         Schema::table('tasks', function (Blueprint $table) {
             $table->string('status', 10);
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password', 60);
             //
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -30,7 +24,6 @@ class AddStatusToTasksTable extends Migration
     {
         Schema::table('tasks', function (Blueprint $table) {
             $table->dropColumn('status');
-            Schema::drop('users');
             //
         });
     }
