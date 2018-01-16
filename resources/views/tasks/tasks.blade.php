@@ -1,4 +1,4 @@
-<div class="media-list">
+<ul class="media-list">
 @foreach ($tasks as $task)
     <?php $user = $task->user; ?>
     <div class="media">
@@ -23,7 +23,7 @@
                 @endif
             </div>
         </div>
-    </div>
+    </ul>
 @endforeach
 </div>
 {!! $tasks->render() !!}

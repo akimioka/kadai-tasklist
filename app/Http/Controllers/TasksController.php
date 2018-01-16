@@ -65,9 +65,8 @@ class TasksController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    { $task = \App\Task::find($id);
-        if (\Auth::user()->id === $task->user_id) {
-         $task = Task::find($id);}
+    { 
+         $task = Task::find($id);
 
         return view('tasks.show', [
             'task' => $task,
@@ -81,10 +80,8 @@ class TasksController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    { $task = \App\Task::find($id);
-        
-        if (\Auth::user()->id === $task->user_id){
-       $task = Task::find($id);}
+    { 
+       $task = Task::find($id);
 
         return view('tasks.edit', [
             'task' => $task,
@@ -127,6 +124,5 @@ class TasksController extends Controller
             $task->delete();
         }
 
-        return redirect()->back();
-    }
-}
+       return redirect('/');//
+}}
